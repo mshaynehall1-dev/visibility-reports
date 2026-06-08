@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Visibility Report - Mile High Mobile Storage</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1a1a1a; margin-bottom: 10px; font-size: 32px; }
+        .subtitle { color: #666; margin-bottom: 30px; font-size: 18px; }
+        .test-date { 
+            background: #e3f2fd; 
+            padding: 10px 15px; 
+            border-radius: 4px; 
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #1976d2;
+        }
+        .section { margin: 30px 0; padding: 25px; background: #f8f9fa; border-radius: 6px; }
+        .section h2 { color: #d32f2f; margin-bottom: 15px; font-size: 24px; }
+        .score-box {
+            text-align: center;
+            padding: 30px;
+            background: #fff3cd;
+            border-left: 4px solid #d32f2f;
+            margin: 20px 0;
+        }
+        .score { font-size: 48px; font-weight: bold; color: #d32f2f; }
+        .score-label { color: #666; font-size: 14px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .score-description { color: #666; margin-top: 10px; font-size: 18px; }
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .platform-card-not-found, .platform-card-found {
+            padding: 15px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .platform-card-not-found { border-color: #ef5350; }
+        .platform-card-found { border-color: #4caf50; }
+        .warning { color: #d32f2f; font-weight: bold; }
+        .found { color: #4caf50; font-weight: bold; }
+        .competitor-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .competitor-list li {
+            padding: 12px;
+            background: white;
+            margin: 8px 0;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+        }
+        .cta-box {
+            background: #1976d2;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 6px;
+            margin: 30px 0;
+        }
+        .cta-box h3 { margin-bottom: 15px; color: white; }
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #1976d2;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .btn:hover { background: #f5f5f5; }
+        .case-study {
+            background: #e8f5e9;
+            padding: 20px;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 14px;
+        }
+        .methodology {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 24px; }
+            .score { font-size: 36px; }
+            .platform-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Visibility Report</h1>
+        <div class="subtitle">Prepared for Mile High Mobile Storage</div>
+        
+        <div class="test-date">
+            ✓ Tested on 2026-06-08 across ChatGPT, Claude, and Gemini
+        </div>
+        
+        <div class="section">
+            <h2>The Problem</h2>
+            <p>You're established in Denver. But when potential customers ask AI assistants for recommendations in your industry, here's what we found:</p>
+        </div>
+
+        <div class="section" style="background: #fff3e0; border-left: 4px solid #ff9800;">
+            <h2 style="color: #e65100;">📊 Why This Matters Now</h2>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li><strong>Answer Engine users are up over 3x</strong> in the last 9 months</li>
+                <li><strong>Google AI Overviews are up 598%</strong> from summer</li>
+                <li><strong>Google is on track for 70%+ of all search to be AI</strong> in the coming months</li>
+            </ul>
+        </div>
+
+        <div class="score-box">
+            <div class="score-label">Your Current AI Visibility Score</div>
+            <div class="score">0.0%</div>
+            <div class="score-description">
+                Not visible in any AI responses
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Platform Results</h2>
+            <p>We tested 3 major AI platforms to see if your business appears when buyers ask for recommendations:</p>
+            
+            <div class="platform-grid">
+                <div class="platform-card-not-found">
+                    <strong>ChatGPT</strong><br>
+                    <span class="warning">✗ Not Found</span>
+                </div>
+                <div class="platform-card-not-found">
+                    <strong>Claude</strong><br>
+                    <span class="warning">✗ Not Found</span>
+                </div>
+                <div class="platform-card-not-found">
+                    <strong>Gemini</strong><br>
+                    <span class="warning">✗ Not Found</span>
+                </div>
+            </div>
+            
+            <div class="methodology">
+                <strong>How we tested:</strong> We asked each platform variations of "Who rents shipping containers in Denver?" and similar buyer-realistic queries. This simulates how your potential customers actually search.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Query Breakdown</h2>
+            <p>Here's exactly what happened when we tested each query:</p>
+            <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 6px;"><strong style="color: #1976d2;">1. "Who rents shipping containers in Denver?"</strong><br><br><div style="margin: 8px 0;">❌ <strong>ChatGPT:</strong> Not mentioned (showed: They offer a variety of shipping containers for rental, This company specializes in portable storage solutions and offers shipping container, and rental)</div><div style="margin: 8px 0;">❌ <strong>Claude:</strong> Not mentioned (showed: Container delivery and storage, PACK-RAT, 1-800-PACK)</div><div style="margin: 8px 0;">❌ <strong>Gemini:</strong> Not mentioned (showed: Often offers both on-site storage, A massive equipment rental company that sometimes includes portable storage, or long-term storage)</div></div><div style="margin: 20px 0; padding: 15px; background: white; border-radius: 6px;"><strong style="color: #1976d2;">2. "Best container rental companies in Denver"</strong><br><br><div style="margin: 8px 0;">❌ <strong>ChatGPT:</strong> Not mentioned (showed: PODS offers portable storage containers that can be used for moving or storage, U-Haul, This company specializes in shipping container)</div><div style="margin: 8px 0;">❌ <strong>Claude:</strong> Not mentioned (showed: PACK-RAT, or a particular type of container rental, Flexible rental periods
+- Multiple container sizes
+- Local and long-distance moves
+- On-site storage)</div><div style="margin: 8px 0;">❌ <strong>Gemini:</strong> Not mentioned (showed: Ensure the delivery truck has adequate space to place and pick up the container, or moving, per-month rental)</div></div><div style="margin: 20px 0; padding: 15px; background: white; border-radius: 6px;"><strong style="color: #1976d2;">3. "Where can I rent a storage container in Denver?"</strong><br><br><div style="margin: 8px 0;">❌ <strong>ChatGPT:</strong> Not mentioned (showed: they can either keep the container at your location or transport it to their storage, PODS offers portable storage, They can deliver a container)</div><div style="margin: 8px 0;">❌ <strong>Claude:</strong> Not mentioned (showed: PACK-RAT, Would you like help comparing specific options or have questions about container, U-Haul)</div><div style="margin: 8px 0;">❌ <strong>Gemini:</strong> Not mentioned (showed: Check what other customers say about the company, Offers ground-level storage, Local Shipping Container)</div></div>
+        </div>
+
+        <div class="section">
+            <h2>Who's Winning Instead</h2>
+            <p>While your visibility is at 0%, these competitors are getting recommended:</p>
+            
+            <ul class="competitor-list">
+                <li><strong>PODS</strong> - Mentioned 8 times</li>
+                <li><strong>Mobile Mini</strong> - Mentioned 7 times</li>
+                <li><strong>PACK-RAT</strong> - Mentioned 5 times</li>
+                <li><strong>1-800-PACK</strong> - Mentioned 5 times</li>
+                <li><strong>U-Haul</strong> - Mentioned 3 times</li>
+            </ul>
+            
+            <p style="margin-top: 20px; color: #666;">Every AI recommendation they get is a potential customer you don't.</p>
+        </div>
+
+        <div class="section">
+            <h2>What's Possible</h2>
+            
+            <div class="case-study">
+                <strong>Recent Case Study - Container Rental Company (Southeast U.S.)</strong><br><br>
+                <strong>Month 1:</strong> 0% visibility across all platforms<br>
+                <strong>Month 2:</strong> 40-60% visibility across ChatGPT, Gemini, and Grok
+            </div>
+            
+            <p style="margin-top: 20px;">This is about making sure AI knows you exist when buyers are asking questions right now. <strong>Search Results with AI Overviews have increased 12X in 9 months!</strong></p>
+        </div>
+
+        <div class="cta-box">
+            <h3>Want to fix this?</h3>
+            <p>I can show you exactly how we'd get Mile High Mobile Storage visible in ChatGPT, Claude, and Gemini.</p>
+            <p><strong>30-minute call. No pitch. Just a clear plan.</strong></p>
+            <a href="https://calendly.com/mshmarketing/30minshaynehall" class="btn" target="_blank">Schedule a Call with Shayne</a>
+        </div>
+        
+        <div class="section">
+            <h3>What Happens Next</h3>
+            <ol style="margin-left: 20px; margin-top: 15px; line-height: 1.8;">
+                <li>30-minute discovery call (no sales pitch)</li>
+                <li>We audit your current digital footprint</li>
+                <li>We show you the exact plan for your market</li>
+                <li>You decide if it makes sense</li>
+                <li>If yes, we implement. If no, you keep the audit.</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p><strong>Report prepared by Alpha Dog Digital</strong></p>
+            <p>Shayne Hall | 2026-06-08</p>
+            <p style="margin-top: 10px; font-size: 12px;">This report was prepared based on public data and AI tests conducted on 2026-06-08. Results may vary based on query phrasing, AI model updates, and time of testing.</p>
+        </div>
+    </div>
+</body>
+</html>
